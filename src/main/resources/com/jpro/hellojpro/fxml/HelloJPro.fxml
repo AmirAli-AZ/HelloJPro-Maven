@@ -4,15 +4,16 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.StackPane?>
+
 <StackPane
         xmlns:fx="http://javafx.com/fxml"
         stylesheets="@../css/HelloJPro.css"
         prefWidth="800" prefHeight="600"
         fx:id="root"
         fx:controller="com.jpro.hellojpro.HelloJProFXMLController">
-    <Label text="Hello" styleClass="hello-label"></Label>
+    <Label text="Hello" styleClass="hello-label"/>
     <ImageView fx:id="logo" fitWidth="300" preserveRatio="true">
-        <Image url="@../img/JPRO_logo_rgb.png"></Image>
+        <Image url="@../img/JPRO_logo_rgb.png"/>
     </ImageView>
-    <Label fx:id="platformLabel" text="Platform: " styleClass="platform-label" StackPane.alignment="BOTTOM_CENTER"></Label>
+    <Label fx:id="platformLabel" text="Platform: " styleClass="platform-label" StackPane.alignment="BOTTOM_CENTER"/>
 </StackPane>

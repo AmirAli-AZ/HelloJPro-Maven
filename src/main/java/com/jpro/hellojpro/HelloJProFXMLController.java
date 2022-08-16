@@ -21,7 +21,10 @@ import java.util.ResourceBundle;
  */
 public class HelloJProFXMLController implements Initializable
 {
-    public Label platformLabel;
+
+    @FXML
+    private Label platformLabel;
+
     @FXML
     protected StackPane root;
 
@@ -31,7 +34,6 @@ public class HelloJProFXMLController implements Initializable
     protected JProApplication jProApplication;
 
     protected ParallelTransition pt;
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
@@ -56,11 +58,8 @@ public class HelloJProFXMLController implements Initializable
         pt = new ParallelTransition(st, ft);
         pt.play();
 
-        if(WebAPI.isBrowser()) {
-            jProApplication.getWebAPI().addInstanceCloseListener(() -> {
-                pt.stop();
-            });
-        }
+        if(WebAPI.isBrowser())
+            jProApplication.getWebAPI().addInstanceCloseListener(() -> pt.stop());
     }
 
 
